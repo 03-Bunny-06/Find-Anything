@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Anything</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="nav-bar-cont">
+        <div class="scroll-watcher"></div>
+        <nav class="nav-bar">
+            <img src="Find-Anything-Images\find-anything.png" class="find-anything-logo">
+        </nav>
+
+        <div class="container-one-white">
+            <div class="card-bmi">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\2.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head">BMI Calculator</h2>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter your Height (in cms): </label> <br>
+                    <input type="text" class="text" id="bmi-cms">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter your Weight (in kgs): </label> <br>
+                    <input type="text" class="text" id="bmi-kgs">
+                </div>
+                <div class="centering-button">
+                    <button class="check" onclick="checkBmi()">Check</button>
+                    <button class="reset" onclick="resetBmi()">Reset</button>
+                </div>
+                <div class="final-bmi-container">
+                    <h1 class="bmi-oupt-text" id="final-bmi-text"></h1>
+                    <img src="" id="final-bmi-emoji"/> <!-- class="bmi-oupt-emoji"  -->
+                </div>
+            </div>
+
+            <div class="card-bmi">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\3.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head">Loan Calculator</h2>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Amount (INR): </label> <br>
+                    <input type="text" class="text" id="lc-amt">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Intrest Rate: </label> <br>
+                    <input type="text" class="text" id="lc-ir">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Months to Pay: </label> <br>
+                    <input type="text" class="text" id="lc-mp">
+                </div>
+                <div class="centering-button">
+                    <button class="check" onclick="checkLc()">Check</button>
+                    <button class="reset" onclick="resetLc()">Reset</button>
+                </div>
+                <div class="final-lc-container">
+                    <img src="" id="final-lc-emoji"/> <!-- class="lc-oupt-emoji"  -->
+                    <h1 class="lc-oupt-text" id="final-lc-text"></h1>
+                </div>
+            </div>
+
+            <div class="card-bmi">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\4.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head">Profit & Loss Calculator</h2>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Cost Price (CP): </label> <br>
+                    <input type="text" class="text" id="pl-cp">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Selling Price (SP): </label> <br>
+                    <input type="text" class="text" id="pl-sp">
+                </div>
+                <div class="centering-button">
+                    <button class="check" onclick="checkPl()">Check</button>
+                    <button class="reset" onclick="resetPl()">Reset</button>
+                </div>
+                <div class="final-pl-container">
+                    <img src="" id="final-pl-emoji"/> <!-- class="pl-oupt-emoji"  -->
+                    <h1 class="pl-oupt-text" id="final-pl-text"></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-two-black">
+            <div class="card-bmi-black">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\6.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head-black">Percentage Calculator</h2>
+                <div class="bmi-spacing-black">
+                    <label class="bmi-label-black">Enter the Amount ($): </label> <br>
+                    <input type="text-black" class="text-black" id="pc-amt">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter the Percentage (%): </label> <br>
+                    <input type="text" class="text-black" id="pc-p">
+                </div>
+                <div class="centering-button">
+                    <button class="check-black" onclick="checkpC()">Check</button>
+                    <button class="reset-black" onclick="resetpC()">Reset</button>
+                </div>
+                <div class="final-pc-container">
+                    <img src="" id="final-pc-emoji"/> <!-- class="pc-oupt-emoji"  -->
+                    <h1 class="pc-oupt-text" id="final-pc-text"></h1>
+                </div>
+            </div>
+
+            <div class="card-bmi-black">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\5.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head-black">Simple Interest Calculator</h2>
+                <div class="bmi-spacing-black">
+                    <label class="bmi-label-black">Enter Principle Amount ($): </label> <br>
+                    <input type="text-black" class="text-black" id="pa-si">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter Annual Intrest Rate (%): </label> <br>
+                    <input type="text" class="text-black" id="ir-si">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">No. of Years: </label> <br>
+                    <input type="text" class="text-black" id="y-si">
+                </div>
+                <div class="centering-button">
+                    <button class="check-black" onclick="checksI()">Check</button>
+                    <button class="reset-black" onclick="resetsI()">Reset</button>
+                </div>
+                <div class="final-si-container">
+                    <img src="" id="final-si-emoji"/> <!-- class="si-oupt-emoji"  -->
+                    <h1 class="si-oupt-text" id="final-si-text"></h1>
+                </div>
+            </div>
+
+            <div class="card-bmi-black">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\7.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head-black">Tip Amount Calculator</h2>
+                <div class="bmi-spacing-black">
+                    <label class="bmi-label-black">Enter Bill Amount ($): </label> <br>
+                    <input type="text-black" class="text-black" id="tp-ba">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter Percentage Tip (%): </label> <br>
+                    <input type="text" class="text-black" id="tp-pt">
+                </div>
+                <div class="centering-button">
+                    <button class="check-black" onclick="checkTip()">Check</button>
+                    <button class="reset-black" onclick="resetTip()">Reset</button>
+                </div>
+                <div class="final-tp-container">
+                    <img src="" id="final-tp-emoji"/> <!-- class="si-oupt-emoji"  -->
+                    <h1 class="tp-oupt-text" id="final-tp-text-1"></h1>
+                    <h1 class="tp-oupt-text" id="final-tp-text-2"></h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-one-white">
+            <div class="card-bmi">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\8.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head">Password Strength Checker</h2>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter you Password: </label> <br>
+                    <input type="password" class="text" id="password">
+                </div>
+                <div class="pswd-power-cont">
+                    <div id="power-point"></div>
+                </div>
+                <div class="centering-button">
+                    <!--<button class="check" onclick="checkPas()">Check</button>-->
+                    <button class="reset" onclick="resetPas()" >Clear</button>
+                </div>
+            </div>
+
+            <div class="card-bmi">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\9.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head">Grade Calculator</h2>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Score in Mathematics: </label> <br>
+                    <input type="text" class="text" id="m">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Score in Physics: </label> <br>
+                    <input type="text" class="text" id="p">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Score in Chemistry: </label> <br>
+                    <input type="text" class="text" id="c">
+                </div>
+                <div class="centering-button">
+                    <button class="check" onclick="checkGc()">Check</button>
+                    <button class="reset" onclick="resetGc()">Reset</button>
+                </div>
+                <div class="final-gc-container">
+                    <h1 class="gc-oupt-text" id="final-gc-text-1"></h1>
+                    <h1 class="gc-oupt-text" id="final-gc-text-2"></h1>
+                    <img src="" id="final-gc-emoji"/> <!-- class="si-oupt-emoji"  -->
+                </div>
+            </div>
+
+            <div class="card-bmi">
+                <div class="centering-button">
+                    <img src="Find-Anything-Images\10.png" height="130px" width="130px"/>
+                </div>
+                <h2 class="text-center main-head">Age Calculator</h2>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Enter your Date of Birth: </label> <br>
+                    <input type="date" class="text" id="input-dob">
+                </div>
+                <div class="bmi-spacing">
+                    <label class="bmi-label">Current Date: </label> <br>
+                    <input type="date" class="text" id="current-date">
+                </div>
+                <div class="centering-button">
+                    <button class="check" onclick="getAge()" >Get Age</button>
+                    <button class="reset" onclick="remAge()" >Reset</button>
+                </div>
+                <div class="final-age-container">
+                    <h1 class="age-oupt-text" id="final-age-text"></h1>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
