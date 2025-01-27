@@ -4,6 +4,8 @@ Project Description:
 
 This application is a collection of calculators built with HTML, CSS, and JavaScript to handle various mathematical and financial computations interactively. Each calculator serves a specific purpose and displays results dynamically with appropriate visual feedback.
 
+<hr/>
+
 Features:
 
 1. BMI Calculator
@@ -37,11 +39,15 @@ Features:
 * Determines age based on the date of birth and a specified current date.
 * Outputs the calculated age in years, months, and days.
 
+<hr/>
+
 Technologies Used:
 
 1. HTML: Structure of the calculators and input fields.
 2. CSS: Styling, transitions, and visual effects for dynamic outputs.
 3. JavaScript: Logic for calculations, validations, and DOM manipulations.
+
+<hr/>
 
 How to Use:
 * Open the application in any modern web browser.
