@@ -56,7 +56,13 @@ How to Use:
 * Click the Check or Calculate button to view the result.
 * Use the Reset button to clear inputs and outputs.
 
+<hr/>
+
 File Dependencies:
 
 * Images: Emojis used in results are located in the Find-Anything-Images/ directory.
   Example: 11.png for Underweight, 12.png for Normal, etc.
+
+![image](https://github.com/user-attachments/assets/25f13320-59c2-4d46-8aa0-bab135325bbe)
+
+![image](https://github.com/user-attachments/assets/e7d754f1-554a-4e03-ba20-0ef8d13f72cb)
